@@ -1,0 +1,552 @@
+{
+  "version": "0.1.74",
+  "runAt": "2026-10-18T03:19:09.357Z",
+  "scope": "Local mocks only; no real course actions or API calls",
+  "passed": 136,
+  "tests": [
+    {
+      "name": "JavaScript syntax and manifest resources",
+      "passed": true
+    },
+    {
+      "name": "Nine route variants and one listener after repeated injection",
+      "passed": true
+    },
+    {
+      "name": "Old and prefixed directory return routes",
+      "passed": true
+    },
+    {
+      "name": "Unknown page explicitly refuses START",
+      "passed": true
+    },
+    {
+      "name": "Embedded frame cannot start another controller",
+      "passed": true
+    },
+    {
+      "name": "Modern directory with unknown pending entry pauses without claiming completion",
+      "passed": true
+    },
+    {
+      "name": "Modern directory reverting to old directory restores old workflow",
+      "passed": true
+    },
+    {
+      "name": "Old learning frame resumes during modern workflow",
+      "passed": true
+    },
+    {
+      "name": "Text question bypasses screenshot and image question requires it",
+      "passed": true
+    },
+    {
+      "name": "Nested screenshot position and clipping validation",
+      "passed": true
+    },
+    {
+      "name": "Diagnostics omit raw errors and secret fields",
+      "passed": true
+    },
+    {
+      "name": "Popup recovery injects once and commands one top controller",
+      "passed": true
+    },
+    {
+      "name": "Stale script requires refresh before START",
+      "passed": true
+    },
+    {
+      "name": "Empty acknowledgement is reported as failure",
+      "passed": true
+    },
+    {
+      "name": "Saved model preserved and probe copied to clipboard",
+      "passed": true
+    },
+    {
+      "name": "Known answer aliases strings and single video IDs normalize without guessing options",
+      "passed": true
+    },
+    {
+      "name": "Judgment text only maps when the displayed option labels identify it",
+      "passed": true
+    },
+    {
+      "name": "Empty ambiguous partial duplicate and invalid responses are rejected before filling",
+      "passed": true
+    },
+    {
+      "name": "JSON fence support does not scrape answers out of unrelated prose",
+      "passed": true
+    },
+    {
+      "name": "Mocked API request normalizes response and records counts only",
+      "passed": true
+    },
+    {
+      "name": "Abstention is logged then retried once per question",
+      "passed": true
+    },
+    {
+      "name": "Response diagnostics omit IDs question text answers and credentials",
+      "passed": true
+    },
+    {
+      "name": "Question stem outranks heading and heading alone is never sent as the stem",
+      "passed": true
+    },
+    {
+      "name": "Video abstention pauses without filling or submitting",
+      "passed": true
+    },
+    {
+      "name": "Compact multiple answers normalize while invalid options and prose are rejected",
+      "passed": true
+    },
+    {
+      "name": "Empty choices fall back to answer only and blank answers remain abstentions",
+      "passed": true
+    },
+    {
+      "name": "Original 0.1.33 reproduces both reported answer normalization failures",
+      "passed": true
+    },
+    {
+      "name": "Chapter quiz image and private-character detection with original-version reproduction",
+      "passed": true
+    },
+    {
+      "name": "Numeric opaque and mixed option values map consistently while mixed input types fail",
+      "passed": true
+    },
+    {
+      "name": "Numeric options fill the intended third radio and verify the resulting page state",
+      "passed": true
+    },
+    {
+      "name": "Four-option retry reports unsupported without clicking any answer",
+      "passed": true
+    },
+    {
+      "name": "Unsupported retry pauses the controller without another fill submit or API call",
+      "passed": true
+    },
+    {
+      "name": "Correct feedback precedes generic timeout and a stuck overlay pauses with the correct reason",
+      "passed": true
+    },
+    {
+      "name": "Editor loading waits for a bounded period without filling submitting or calling the API",
+      "passed": true
+    },
+    {
+      "name": "Unverified completion pauses in Chinese without navigating",
+      "passed": true
+    },
+    {
+      "name": "Document reader counts image ancestors once and preserves bottom detection",
+      "passed": true
+    },
+    {
+      "name": "Routine structure scans throttle while explicit probes force a fresh record",
+      "passed": true
+    },
+    {
+      "name": "Long reference without usable keywords retains its opening summary",
+      "passed": true
+    },
+    {
+      "name": "T/F Y/N shuffled letters normalize fill and verify by displayed order",
+      "passed": true
+    },
+    {
+      "name": "Original 0.1.34 independently reproduces T/F prefix and one-pixel image failures",
+      "passed": true
+    },
+    {
+      "name": "English abbreviations remain intact while explicit matching option prefixes are stripped",
+      "passed": true
+    },
+    {
+      "name": "Hidden tracking and explicit decoration skip screenshots while diagrams and small glyphs remain",
+      "passed": true
+    },
+    {
+      "name": "Video questions share conservative image detection and abbreviation-safe text extraction",
+      "passed": true
+    },
+    {
+      "name": "Reference selection status reaches request logs and popup without exposing source text or stale status",
+      "passed": true
+    },
+    {
+      "name": "Quiz entry detection accepts counted labels, non-button tags, and direct quiz links",
+      "passed": true
+    },
+    {
+      "name": "Quiz detection rejects decoy, disabled, and cross-origin links",
+      "passed": true
+    },
+    {
+      "name": "Opening a new-tab quiz is reported to the controller",
+      "passed": true
+    },
+    {
+      "name": "Missing quiz entry pauses instead of silently returning to the directory",
+      "passed": true
+    },
+    {
+      "name": "Original 0.1.35 reproduces counted div and unlabeled direct-link misses",
+      "passed": true
+    },
+    {
+      "name": "Legacy label, numbered span, counted li, input value, aria label, and relative href work",
+      "passed": true
+    },
+    {
+      "name": "Malformed actions, external labeled links, prose, path prefixes, disabled and hidden entries are rejected",
+      "passed": true
+    },
+    {
+      "name": "Missing entries get a loading grace period then pause for unknown or pending quiz state",
+      "passed": true
+    },
+    {
+      "name": "Controller waits for same-tab quiz and pauses after a new-tab quiz click",
+      "passed": true
+    },
+    {
+      "name": "Quiz page without question roots shows elapsed loading time then pauses with recovery guidance",
+      "passed": true
+    },
+    {
+      "name": "Alternate quiz containers and titles preserve grouping filling and verification",
+      "passed": true
+    },
+    {
+      "name": "ARIA radio controls are grouped, filled, and verified without native inputs",
+      "passed": true
+    },
+    {
+      "name": "Custom options using selected class markers are filled and verified",
+      "passed": true
+    },
+    {
+      "name": "Empty hidden answer fields allow initial blank state and verify after click",
+      "passed": true
+    },
+    {
+      "name": "Missing and duplicate quiz ids receive positional ids and stop when the page order changes",
+      "passed": true
+    },
+    {
+      "name": "Loaded titles without supported controls pause before requesting answers",
+      "passed": true
+    },
+    {
+      "name": "Opened quiz without entering the current tab pauses with tab-switch guidance",
+      "passed": true
+    },
+    {
+      "name": "Script-opened tab timeout pauses with guidance while confirmed completion still advances",
+      "passed": true
+    },
+    {
+      "name": "Video entry aliases are accepted while the main-content tab remains excluded",
+      "passed": true
+    },
+    {
+      "name": "Directory completion conflicts with a pending task marker and pauses safely",
+      "passed": true
+    },
+    {
+      "name": "Modern directory remains guarded when its pending marker and entry are not verified",
+      "passed": true
+    },
+    {
+      "name": "Modern chapter_body and chapter_th_renwu structures produce a same-row target",
+      "passed": true
+    },
+    {
+      "name": "Modern pending markers with status text and embedded counts are recognized",
+      "passed": true
+    },
+    {
+      "name": "Modern sibling task title is accepted only when the row has one candidate",
+      "passed": true
+    },
+    {
+      "name": "Chapter switch waits briefly then rebinds the task to the current chapter",
+      "passed": true
+    },
+    {
+      "name": "A different course still pauses instead of rebinding progress",
+      "passed": true
+    },
+    {
+      "name": "A modern directory link in the task no longer looks like another course",
+      "passed": true
+    },
+    {
+      "name": "Opening a chapter from the modern directory survives the chapter-change guard",
+      "passed": true
+    },
+    {
+      "name": "A real course switch still pauses once the entry window has passed",
+      "passed": true
+    },
+    {
+      "name": "Extra tracking parameters do not make the directory look like another course",
+      "passed": true
+    },
+    {
+      "name": "Transient page network and frame failures get four backoff retries",
+      "passed": true
+    },
+    {
+      "name": "Deterministic captcha quiz api and layout errors are never retried",
+      "passed": true
+    },
+    {
+      "name": "A rejected play() is reported in Chinese and stays retryable",
+      "passed": true
+    },
+    {
+      "name": "A decorative option image keeps the readable text and marks it usable",
+      "passed": true
+    },
+    {
+      "name": "A readable text question with a picture is not screenshotted anymore",
+      "passed": true
+    },
+    {
+      "name": "A stem pointing at a figure still gets its screenshot",
+      "passed": true
+    },
+    {
+      "name": "Guessing fills only choice questions that have no answer",
+      "passed": true
+    },
+    {
+      "name": "Random mode answers every question and stores each one once",
+      "passed": true
+    },
+    {
+      "name": "Auto reload only fires for self-inflicted pauses and stops after three tries",
+      "passed": true
+    },
+    {
+      "name": "A reported screenshot failure is answered from text while unreported gaps are refused",
+      "passed": true
+    },
+    {
+      "name": "Question images ignore icons scripts and hidden nodes and keep real pictures",
+      "passed": true
+    },
+    {
+      "name": "Background image download is limited to course hosts",
+      "passed": true
+    },
+    {
+      "name": "An unreadable non-answer radio option does not block the quiz",
+      "passed": true
+    },
+    {
+      "name": "A miss-registered click is repaired before reporting a mismatch",
+      "passed": true
+    },
+    {
+      "name": "A truly unreadable answer option stops with a specific reason after retries",
+      "passed": true
+    },
+    {
+      "name": "An empty reply names unreadable text instead of a generic no-answer message",
+      "passed": true
+    },
+    {
+      "name": "A text-only question without course material is explicitly told to answer from common sense",
+      "passed": true
+    },
+    {
+      "name": "A model refusal now shows its own reason in the paused message",
+      "passed": true
+    },
+    {
+      "name": "A batched refusal is rescued by asking that question alone",
+      "passed": true
+    },
+    {
+      "name": "HTTP failure status codes reach the log so 402 and 429 can be told apart",
+      "passed": true
+    },
+    {
+      "name": "A failed request shows the provider wording next to the status code",
+      "passed": true
+    },
+    {
+      "name": "A rejected image payload is retried as text instead of stopping",
+      "passed": true
+    },
+    {
+      "name": "A partially answered batch is completed by asking only the missing questions",
+      "passed": true
+    },
+    {
+      "name": "Screenshotting the already active tab needs no tab switch",
+      "passed": true
+    },
+    {
+      "name": "A different active tab is activated before the screenshot instead of failing",
+      "passed": true
+    },
+    {
+      "name": "A maximised window is focused but never shrunk",
+      "passed": true
+    },
+    {
+      "name": "A figure drawn as a CSS background is picked up without a screenshot",
+      "passed": true
+    },
+    {
+      "name": "Returning to the old directory rebuilds the normal directory workflow",
+      "passed": true
+    },
+    {
+      "name": "Returning to the modern directory rebuilds the modern directory workflow",
+      "passed": true
+    },
+    {
+      "name": "Modern submitBack and legacy submitCheckTimes dialogs confirm exactly one visible button",
+      "passed": true
+    },
+    {
+      "name": "Hidden disabled unrelated and ambiguous confirmation dialogs never click",
+      "passed": true
+    },
+    {
+      "name": "Outer student-study confirmation dialog is recognized while quiz controls remain in a child frame",
+      "passed": true
+    },
+    {
+      "name": "Controller confirms a newly recognized dialog once without repeating first submission",
+      "passed": true
+    },
+    {
+      "name": "Submission waits up to 45 seconds and still requires a platform completion marker",
+      "passed": true
+    },
+    {
+      "name": "Multiple confirmation frames pause instead of choosing an arbitrary button",
+      "passed": true
+    },
+    {
+      "name": "Restart after unverified submission resumes verification without answering or submitting again",
+      "passed": true
+    },
+    {
+      "name": "Confirmation diagnostics retain counts without dialog text answers or secrets",
+      "passed": true
+    },
+    {
+      "name": "Video retry combinations normalize, deduplicate, and retain only distinct attempts",
+      "passed": true
+    },
+    {
+      "name": "Video retry sends only sanitized excluded option combinations to the answer request",
+      "passed": true
+    },
+    {
+      "name": "Two-option retry blocks excluded choices and honors manual-submit mode",
+      "passed": true
+    },
+    {
+      "name": "Multi-option retry re-asks with excluded combinations and submits only a distinct answer",
+      "passed": true
+    },
+    {
+      "name": "Unlabeled popBtn confirmation dialog is anchored by its 提交 label and clicked once",
+      "passed": true
+    },
+    {
+      "name": "A bare 提交 button without confirmation wording around it is never clicked",
+      "passed": true
+    },
+    {
+      "name": "Confirm click fires a pointer sequence plus exactly one activation",
+      "passed": true
+    },
+    {
+      "name": "A visible but unreadable confirmation dialog pauses with a precise reason instead of a silent timeout",
+      "passed": true
+    },
+    {
+      "name": "Confirming retries a bounded number of times while the dialog stays open",
+      "passed": true
+    },
+    {
+      "name": "Panel kind diagnostic keeps selector clues and drops page text",
+      "passed": true
+    },
+    {
+      "name": "Unknown dialog now reports which selector matched it instead of only a count",
+      "passed": true
+    },
+    {
+      "name": "Probe records the control shape of the dialog even for span buttons",
+      "passed": true
+    },
+    {
+      "name": "Structure diagnostics always carry confirm hits labels and scan path",
+      "passed": true
+    },
+    {
+      "name": "New probe fields survive sanitizing and page text is still dropped",
+      "passed": true
+    },
+    {
+      "name": "Entry state reaches the structure record and one visit costs one entry lookup",
+      "passed": true
+    },
+    {
+      "name": "Conflicting entry candidates are recorded as ambiguity instead of a bare count",
+      "passed": true
+    },
+    {
+      "name": "Entry flags pass the sanitizer without inventing false positives",
+      "passed": true
+    },
+    {
+      "name": "A nine-question sheet is answered in small batches instead of one giant request",
+      "passed": true
+    },
+    {
+      "name": "A single question still costs exactly one request",
+      "passed": true
+    },
+    {
+      "name": "The previous version stranded the last three questions of a nine-question sheet",
+      "passed": true
+    },
+    {
+      "name": "Every leftover question is rescued now, however many the sheet has",
+      "passed": true
+    },
+    {
+      "name": "Every batch refusing still stops with the original ANSWER_EMPTY reason",
+      "passed": true
+    },
+    {
+      "name": "A partly answered sheet comes back incomplete instead of pausing outright",
+      "passed": true
+    },
+    {
+      "name": "A sheet with nothing usable is still rejected rather than silently skipped",
+      "passed": true
+    },
+    {
+      "name": "A partly answered sheet is never reloaded into the same failed request",
+      "passed": true
+    }
+  ]
+}

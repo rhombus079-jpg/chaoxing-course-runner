@@ -1,0 +1,37 @@
+{
+  "manifest_version": 3,
+  "name": "课程流程助手",
+  "version": "0.1.74",
+  "description": "从超星课程目录、视频、课后练习或章节测验开始运行课程流程。",
+  "permissions": [
+    "storage",
+    "tabs",
+    "webNavigation",
+    "activeTab",
+    "scripting"
+  ],
+  "host_permissions": [
+    "*://*.chaoxing.com/*",
+    "*://chaoxing.com/*",
+    "https://api.deepseek.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.chaoxing.com/*",
+        "*://chaoxing.com/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_idle",
+      "all_frames": true
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+:root { color-scheme: light; font-family: "Microsoft YaHei", system-ui, sans-serif; color: #1d2935; }
+* { box-sizing: border-box; }
+body { width: 330px; margin: 0; background: #f7f9fa; }
+header { display: flex; align-items: center; justify-content: space-between; padding: 16px 18px 12px; border-bottom: 1px solid #dbe1e4; background: white; }
+h1 { margin: 0; font-size: 16px; font-weight: 650; }
+.indicator { color: #4d6570; font-size: 12px; }
+main { padding: 16px 18px; }
+.status { min-height: 42px; margin: 0 0 14px; font-size: 13px; line-height: 1.55; }
+.actions { display: flex; gap: 8px; margin-bottom: 16px; }
+button, input, select, textarea { font: inherit; }
+button { border: 1px solid #c8d2d6; border-radius: 4px; background: white; color: #1d2935; padding: 7px 12px; cursor: pointer; }
+button:hover:not(:disabled) { border-color: #117b73; }
+button:disabled { cursor: default; opacity: .5; }
+button.primary { background: #087b71; border-color: #087b71; color: white; }
+details { border-top: 1px solid #dbe1e4; padding-top: 12px; }
+summary { cursor: pointer; font-size: 13px; font-weight: 600; }
+label:not(.check) { display: block; margin: 14px 0 6px; font-size: 12px; color: #465a62; }
+input[type="password"], select, textarea { width: 100%; border: 1px solid #c8d2d6; border-radius: 4px; background: white; padding: 7px 8px; font-size: 13px; }
+.key-row { display: flex; gap: 6px; }
+.key-row input { min-width: 0; }
+.link { margin-top: 7px; padding: 3px 0; background: none; border: 0; color: #a53731; font-size: 12px; }
+textarea { resize: vertical; }
+#saveReference, #savePrompt { margin-top: 6px; }
+.check { display: flex; gap: 7px; align-items: center; margin-top: 14px; font-size: 13px; }
+.diagnostics { display: flex; gap: 8px; margin-top: 14px; padding-top: 12px; border-top: 1px solid #dbe1e4; }
+.diagnostics button { font-size: 12px; }
+#message { min-height: 18px; color: #a53731; font-size: 12px; line-height: 1.5; }

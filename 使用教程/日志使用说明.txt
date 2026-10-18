@@ -1,0 +1,16 @@
+0.1.73 日志说明
+
+1. 在出问题页面点击“复制页面探针”，到同一 AI 对话按 Ctrl+V，可多次采集。
+2. 报错后点“导出日志”，把日志、探针及本 ZIP 一起交给 AI。
+3. answer_result 的 stage=read 表示读取题目，stage=response 表示接口结果校验。
+4. code：ANSWER_OK 为结构校验通过（不代表答案正确）；ANSWER_EMPTY 为没给答案；ANSWER_FORMAT 为格式不兼容；ANSWER_ID 为题号对应失败；ANSWER_OPTIONS 为选项非法；ANSWER_BLANKS 为填空数量或内容不合法。
+5. 只记录数量、类别、字符长度和是否用图，不保存题目、答案或原始响应。
+6. 清除日志只清除扩展诊断，不改课程平台记录。
+7. submitConfirmDialogCount 是可见的候选确认框数，submitConfirmCandidateCount 是符合提交语义的确认按钮数。只有唯一候选才确认；这些数量不代表提交成功。
+8. submitConfirmPanelKind 是已识别弹窗的脱敏结构线索（标签名、类名、role），只有选择器信息，不含任何页面文字；弹窗认出但按钮认不出时，看这个字段就能定位结构。
+9. submitConfirmDialogHits 记录哪个选择器命中了确认框（如 confirmSubWin:0,role-dialog:1）；submitConfirmLabelCount 是文字恰为提交/确定的可点元素数量（含 span/div）。
+10. submitConfirmControlKinds 记录弹窗内控件的形态（标签、role、type、是否带 onclick、相关类名），不含按钮文字；submitConfirmScanKind 记录识别路径。
+11. frameRole 标记该条结构记录来自顶层页面还是嵌套框架；visibleLinks、modalSignalCount、overlaySignalCount、loadingSignalCount、errorSignalCount、captchaSignalCount 是页面信号数量，用来判断弹窗是否还没渲染完。
+12. recovery 记录里 reason=transient-retry 表示「这次是暂态故障自动重试」，不代表任务停了；4 次都失败才会写入暂停。
+13. error 记录新增 errorName（如 TypeError），只有类型名，没有错误正文；仍不含页面文字、题目或答案。
+14. hasQuizEntry / hasVideoEntry / hasDocumentEntry 表示该帧是否找到对应入口（只在为 true 时出现）；entryAmbiguous 表示入口候选冲突；entryCandidateCount 是三处候选数量合计。入口查找有 1.2 秒缓存，同一周期的页面检查与结构记录共用结果。

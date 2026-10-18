@@ -1,0 +1,40 @@
+课程流程助手 0.1.73：新版页面探针使用说明
+
+这版可以处理“新版课程外壳里嵌着旧版视频/答题页面”的情况。
+
+最简单的用法
+1. 在 Chrome 或 Edge 安装解压后的扩展文件夹。
+2. 打开学习通课程页面，点浏览器右上角的“课程流程助手”。
+3. 点“复制页面探针”。页面只会读取结构线索，不会播放视频、不读取题目答案、不提交内容。
+4. 到 AI 对话框按 Ctrl+V，把整段内容粘贴进去。
+5. 如果页面变化，再点一次“复制页面探针”，继续粘贴到同一个 AI 对话框。可以重复多次。
+
+你需要告诉 AI 的话只有一句：
+“这是同一课程页面在不同状态下的探针，请判断新版外层和旧版内层分别怎么处理，并修改扩展后给我新的 ZIP。”
+
+探针说明
+- 探针会自动去掉课程链接参数、题目内容、答案、截图、账号、密码、Cookie 和密钥。
+- 探针可以显示页面是新版、旧版，或者新版外层中包含旧版 iframe。
+- 如果看到 #video_html5_api、.vjs-big-play-button、video，说明旧版视频内层仍可沿用旧程序。
+- 如果看到 .fanyaChapter、.chapter_body、.chapter_th_renwu、.chapter_item、.chapter_unit、.knowledgeJobCount，说明新版目录外层已经出现；程序会在同一任务行内寻找入口，并在结构仍无法确认时暂停。
+- 如果测验名称带数量、使用 div/span/li、role=tab，或页面直接提供同源测验链接，程序会结合结构和链接判断；多个候选无法区分时会暂停。
+- 如果视频完成后找不到测验入口，程序不会直接返回目录；等待加载后仍无法确认就暂停。若入口打开新标签页，请切换到新标签页后重新点“开始”。
+- 如果新版目录和旧版学习页同时出现，优先确认旧版 iframe 的视频/测验状态；新版外层完成标记冲突时会暂停。
+- 提交确认框相关字段（0.1.73 新增）
+  · submitConfirmDialogHits：哪个选择器命中了确认框，例如 role-dialog:1 说明命中的是 role=dialog，而不是 #confirmSubWin / #submitBack。
+  · submitConfirmPanelKind：命中容器的标签、类名、role，例如 DIV .popMain role=dialog，不含任何页面文字。
+  · submitConfirmControlKinds：弹窗里每个可点控件的形态，例如 span/class=popBtn、a/onclick，不含按钮文字。
+  · submitConfirmLabelCount：文字恰为“提交/确定”的可点元素数量（含 span/div），0 就说明页面上没有可识别的提交字样。
+  · submitConfirmScanKind：识别路径，known-dialog（已知容器）/ label-anchor（按钮文字锚定）/ panel-scan（弹窗范围扫描）/ none（未识别）。
+  · modalSignalCount、overlaySignalCount、loadingSignalCount、errorSignalCount：可见弹窗、遮罩、加载态、错误态元素数量，用来判断弹窗是不是还没渲染完。
+- 入口相关字段（0.1.73 新增）
+  · hasQuizEntry / hasVideoEntry / hasDocumentEntry：这一帧有没有找到测验、视频、文档入口。三个都空就是「没找到入口」。
+  · entryAmbiguous：入口候选多于一个、无法区分时出现。看到它说明程序是按「入口冲突」暂停的，不是没找到。
+  · entryCandidateCount：三类入口的候选数量合计。0 = 页面上真没有入口；≥2 = 有候选但互相打架，需要人工确认后再点。
+  · 注意：探针是逐帧采集的，入口在旧版学习 iframe 里时，要同时看外层 frame=0 和内层那条记录。
+- 提交确认框认不出来时，请把上面这几个字段一起发过来，不用截图也能定位。
+
+不要发送给 AI 的内容
+账号、密码、Cookie、API Key、验证码、课程链接、截图和题目答案。
+
+

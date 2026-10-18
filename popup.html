@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>课程流程助手</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <header><h1>课程流程助手</h1><span id="indicator" class="indicator">待启动</span></header>
+  <main>
+    <p id="status" class="status">打开超星课程目录、视频或章节测验页后开始当前课程。</p>
+    <p id="referenceStatus" role="status" hidden></p>
+    <div class="actions">
+      <button id="start" class="primary">开始</button>
+      <button id="pause" disabled>暂停</button>
+    </div>
+    <details>
+      <summary>设置</summary>
+      <label for="apiKey">DeepSeek 接口密钥</label>
+      <div class="key-row"><input id="apiKey" type="password" autocomplete="off" placeholder="sk-…"><button id="saveKey">保存</button></div>
+      <button id="clearKey" class="link">删除本机密钥</button>
+      <label for="model">文字答题模型（加密题自动切换识图模型）</label>
+      <select id="model"><option value="deepseek-chat">deepseek-chat</option><option value="deepseek-reasoner">deepseek-reasoner</option><option value="deepseek-v4-pro">deepseek-v4-pro</option><option value="deepseek-flash">deepseek-flash</option></select>
+      <label for="reference">课程资料（可选）</label>
+      <textarea id="reference" rows="4" placeholder="粘贴课程笔记或教材摘要"></textarea>
+      <button id="saveReference">保存资料</button>
+      <label for="customPrompt">自定义答题提示词（可选，最多 500 字）</label>
+      <textarea id="customPrompt" rows="3" maxlength="500" placeholder="例如：填空题只填教材中的术语；无法判断时不要猜测"></textarea>
+      <button id="savePrompt">保存提示词</button>
+      <label for="answerMode">答题方式</label>
+      <select id="answerMode">
+        <option value="ai">AI 作答（调用接口）</option>
+        <option value="random">随机作答（不调用接口）</option>
+        <option value="collect">只收集题目（不填写、不提交）</option>
+      </select>
+      <label class="check"><input id="autoSubmit" type="checkbox" checked> 自动提交章节测验</label>
+      <label class="check"><input id="captchaExperimental" type="checkbox"> 验证码自动识别（测试）</label>
+      <label class="check"><input id="guessUnknown" type="checkbox"> 取不到答案时随机选一个（记为待复习）</label>
+      <label class="check"><input id="autoRefresh" type="checkbox" checked> 连续失败自动刷新页面（最多 3 次）</label>
+    </details>
+    <div class="diagnostics">
+      <button id="exportLogs" title="下载本机诊断日志 JSON 文件">导出日志</button>
+      <button id="exportProbe" title="只读取当前页面结构并复制脱敏探针">复制页面探针</button>
+      <button id="clearLogs" title="清除本机保存的诊断日志">清除日志</button>
+      <button id="exportReview" title="下载待复习的题目（猜测或平台判错）">导出待复习</button>
+    </div>
+    <p id="message" role="status"></p>
+  </main>
+  <script src="popup.js"></script>
+</body>
+</html>
